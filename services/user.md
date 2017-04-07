@@ -1,8 +1,7 @@
 # User Service (od.user.service)
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:3 -->
 
-- [User Service (od.user.service)](#user-service-oduserservice)
 
 <!-- /TOC -->
 

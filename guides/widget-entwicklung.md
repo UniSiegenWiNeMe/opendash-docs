@@ -1,24 +1,23 @@
 # Widget Entwicklung
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:6 -->
 
-- [Widget Entwicklung](#widget-entwicklung)
-  - [Entwicklung](#entwicklung)
-    - [Konstruktor Funktion](#konstruktor-funktion)
-    - [Widget Objekt](#widget-objekt)
-      - [widgetController](#widgetcontroller)
-      - [widgetTemplate](#widgettemplate)
-      - [settingsController](#settingscontroller)
-      - [settingsTemplate](#settingstemplate)
-      - [presets](#presets)
-  - [Entwicklung mit open.DASH CLI](#entwicklung-mit-opendash-cli)
-    - [Template herunterladen](#template-herunterladen)
-    - [Widget builden](#widget-builden)
-    - [Template Datei Struktur](#template-datei-struktur)
-    - [Widget/Settings Controller](#widgetsettings-controller)
-      - [Ladeanimation](#ladeanimation)
-    - [Widget/Settings Template](#widgetsettings-template)
-    - [Widget/Settings Styles](#widgetsettings-styles)
+- [Entwicklung](#entwicklung)
+  - [Konstruktor Funktion](#konstruktor-funktion)
+  - [Widget Objekt](#widget-objekt)
+    - [widgetController](#widgetcontroller)
+    - [widgetTemplate](#widgettemplate)
+    - [settingsController](#settingscontroller)
+    - [settingsTemplate](#settingstemplate)
+    - [presets](#presets)
+- [Entwicklung mit open.DASH CLI](#entwicklung-mit-opendash-cli)
+  - [Template herunterladen](#template-herunterladen)
+  - [Widget builden](#widget-builden)
+  - [Template Datei Struktur](#template-datei-struktur)
+  - [Widget/Settings Controller](#widgetsettings-controller)
+    - [Ladeanimation](#ladeanimation)
+  - [Widget/Settings Template](#widgetsettings-template)
+  - [Widget/Settings Styles](#widgetsettings-styles)
 
 <!-- /TOC -->
 

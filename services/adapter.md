@@ -1,22 +1,15 @@
 # Adapter Service (od.adapter.service)
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Adapter Service (od.adapter.service)](#adapter-service-odadapterservice)
-  - [Unterschied zu v1](#unterschied-zu-v1)
-  - [Nutzung](#nutzung)
-    - [$adapter.list(options [, callback])](#adapterlistoptions--callback)
-      - [Parameter](#parameter)
-      - [Rückgabe](#rückgabe)
-    - [$adapter.get(options [, callback])](#adaptergetoptions--callback)
-      - [Parameter](#parameter-1)
-      - [Rückgabe](#rückgabe-1)
-    - [$adapter.values(options [, callback])](#adaptervaluesoptions--callback)
-      - [Parameter](#parameter-2)
-      - [Rückgabe](#rückgabe-2)
-    - [$adapter.value(id [, callback])](#adaptervalueid--callback)
-    - [$adapter.unsubscribe(subscription)](#adapterunsubscribesubscription)
-    - [$adapter.set(id, value)](#adaptersetid-value)
+- [Unterschied zu v1](#unterschied-zu-v1)
+- [Nutzung](#nutzung)
+  - [$adapter.list(options [, callback])](#adapterlistoptions--callback)
+  - [$adapter.get(options [, callback])](#adaptergetoptions--callback)
+  - [$adapter.values(options [, callback])](#adaptervaluesoptions--callback)
+  - [$adapter.value(id [, callback])](#adaptervalueid--callback)
+  - [$adapter.unsubscribe(subscription)](#adapterunsubscribesubscription)
+  - [$adapter.set(id, value)](#adaptersetid-value)
 
 <!-- /TOC -->
 

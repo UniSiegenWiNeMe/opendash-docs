@@ -2,13 +2,10 @@
 
 Mit dem Env Service kann man, ähnlich wie mit Umgebungsvariablen, die Instanz konfigurieren.
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Env Service (od.env.service)](#env-service-odenvservice)
-  - [Nutzung](#nutzung)
-    - [$env(key: String)](#envkey-string)
-      - [Parameter](#parameter)
-      - [Rückgabe](#rückgabe)
+- [Nutzung](#nutzung)
+  - [$env(key: String)](#envkey-string)
 
 <!-- /TOC -->
 

@@ -1,10 +1,9 @@
 # Modal Service (od.modal.service)
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Modal Service (od.modal.service)](#modal-service-odmodalservice)
-  - [Nutzung](#nutzung)
-    - [$dashboard.showModal(options)](#dashboardshowmodaloptions)
+- [Nutzung](#nutzung)
+  - [$dashboard.showModal(options)](#dashboardshowmodaloptions)
 
 <!-- /TOC -->
 

@@ -2,16 +2,11 @@
 
 Der Dashboard Service ist dazu da das Dashboard zu modifizieren, über diesen Service können Widgets hinzugefügt, gelöscht und bearbeitet werden. Außerdem ist es möglich zwischen verschiedenen Dashboards hin und her zu wechseln und die Daten des momentan ausgewählten Dashboards, sowie aller Dashboards einzusehen.
 
-<!-- TOC -->
+<!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Dashboard Service (od.dashboard.service)](#dashboard-service-oddashboardservice)
-  - [Nutzung](#nutzung)
-    - [$dashboard.addWidget(widget)](#dashboardaddwidgetwidget)
-      - [Parameter](#parameter)
-      - [Rückgabe](#rückgabe)
-    - [$dashboard.onWidgetResize(callback: Function)](#dashboardonwidgetresizecallback-function)
-      - [Parameter](#parameter-1)
-      - [Rückgabe](#rückgabe-1)
+- [Nutzung](#nutzung)
+  - [$dashboard.addWidget(widget)](#dashboardaddwidgetwidget)
+  - [$dashboard.onWidgetResize(callback: Function)](#dashboardonwidgetresizecallback-function)
 
 <!-- /TOC -->
 
