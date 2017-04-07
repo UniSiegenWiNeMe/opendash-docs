@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [Einleitung](README.md)
 
 ## Guides
 
