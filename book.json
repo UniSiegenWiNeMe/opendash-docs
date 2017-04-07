@@ -1,8 +1,18 @@
 {
+  "gitbook": ">3.0.0",
   "plugins": [
+    "edit-link",
+    "github",
     "theme-api"
   ],
   "pluginsConfig": {
+    "edit-link": {
+      "base": "https://github.com/UniSiegenWiNeMe/opendash-docs/edit/master",
+      "label": "Seite bearbeiten"
+    },
+    "github": {
+      "url": "https://github.com/UniSiegenWiNeMe/opendash"
+    },
     "theme-api": {
       "languages": [
         {
@@ -11,6 +21,12 @@
           "default": true
         }
       ]
+    }
+  },
+  "links": {
+    "sharing": {
+      "facebook": false,
+      "twitter": false
     }
   }
 }

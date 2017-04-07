@@ -1,0 +1,14 @@
+{
+  "name": "opendash-docs",
+  "version": "1.0.0",
+  "author": "Sebastian Zilles <sebastian@zilles.io>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "install": "gitbook install",
+    "build": "gitbook build"
+  },
+  "devDependencies": {
+    "gitbook-cli": "^2.3.0"
+  }
+}
