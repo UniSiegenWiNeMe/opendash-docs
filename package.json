@@ -6,7 +6,8 @@
   "private": true,
   "scripts": {
     "install": "gitbook install",
-    "build": "gitbook build"
+    "build": "gitbook build",
+    "serve": "gitbook serve"
   },
   "devDependencies": {
     "gitbook-cli": "^2.3.0"
