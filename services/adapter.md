@@ -194,7 +194,7 @@ Werte aus der Vergangenheit abfragen:
 
 **Mit `options.history.start` und `options.history.end`:**
 
-Beide werte müssen [Moment](http://momentjs.com/) Objekte oder von [Moment für den Konstruktor akzeptierte Werte](http://momentjs.com/docs/#/parsing/) sein. Es werden die Daten zwischen den beiten gegebenen Zeitpunkten angezeigt.
+Beide Werte müssen [Moment](http://momentjs.com/) Objekte oder von [Moment für den Konstruktor akzeptierte Werte](http://momentjs.com/docs/#/parsing/) sein. Es werden die Daten zwischen den beiten gegebenen Zeitpunkten angezeigt.
 
 ```js
 let promise = $adapter.values({

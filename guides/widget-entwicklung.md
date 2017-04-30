@@ -248,8 +248,11 @@ Inline CSS ist in bestimmten Szenarien ok, ich schließe mich der [Meinung auf S
 
 Die Style Dateien sind [SCSS](http://sass-lang.com/) Dateien, in ihnen kann in den meisten Fällen bedenkenlos normales CSS benutzt werden oder auf Features von [SCSS](http://sass-lang.com/) benutzt werden.
 
-Die Styles werden automatisch mit dem Element Namen über Nesting geprefixt.
+Im Moment werden Styles nicht automatisch mitgeladen. Es wird empfohlen, dass neben der style.scss Datei einer Instanz eine `_widget.scss` Datei angelegt wird. Diese wird in der `style.scss` Datei mit `@import "widgets";` importiert.
 
-Beispiel:
+In der `_widget.scss` Datei können dann Styles von Widgets wie folgt importiert werden:
 
-Der Name des Widgets ist `test-widget`. Die Selektoren der Widget Style Datei werden also mit `od-widget-test-widget` geprefixt und die Widget Settings Style Datei wird mit `od-widget-test-widget-settings` geprefixt.
+```
+@import "node_modules/opendash-widget-example-widget/src/widget/widget.scss";
+@import "node_modules/opendash-widget-example-widget/src/settings/settings.scss";
+```
