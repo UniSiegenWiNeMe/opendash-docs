@@ -1,6 +1,6 @@
 # fit-text Component
 
-`fit-text` ist ein Angular Component, mit dem man Text auf eine möglichst große Größe skalieren kann.
+`fit-text` ist ein Angular Component, mit dem man Text auf eine möglichst große Größe skalieren kann, ohne dass overflow entsteht.
 
 ## Benutzung
 
@@ -31,7 +31,7 @@ this.ft = {
 
 ### Beispiel für Synchronisierung
 
-Wenn meherere `fit-text` Elemente können mit `ftgroup` auf die gleiche Größe synchronisiert werden, indem die gleiche Variable für zwei oder mehr `fit-text` Elemente verwendet wird.
+Meherere `fit-text` Elemente können mit `ftgroup` auf die gleiche Größe synchronisiert werden, indem die gleiche Variable für zwei oder mehr `fit-text` Elemente verwendet wird.
 
 Template:
 
