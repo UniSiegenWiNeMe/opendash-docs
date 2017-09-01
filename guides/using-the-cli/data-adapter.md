@@ -1,0 +1,58 @@
+# Data adapters
+
+An instance of open.DASH can have one or more data adapters.
+
+Data adapters are Angular Services, for more information check out the official documentation about Angular Services.
+
+## Example
+
+```js
+export default ($injector) => {
+
+  const moment = $injector.get('moment');
+  const _ = $injector.get('lodash');
+
+  return {
+    init(ctx, resolve, reject) {
+      // Request a list of all items via HTTP/websocket
+      HTTPRequest().then(data => {
+        data.forEach(item => {
+          // Create each item
+          ctx.create(item);
+        });
+        // Call resolve() once you are done
+        resolve();
+      });
+    },
+    history(ctx, resolve, reject, options) {
+
+      let itemID = options.id;
+
+      if (options) {
+        if (options.start && options.end) {
+          // ...
+        }
+
+        if (options.since) {
+          // ...
+        }
+      }
+
+      // Get the value history for the given item via HTTP/websocket
+      HTTPRequest().then(data => {
+        let result = data.map(item => ({
+          date: moment(item.timestamp).valueOf(), // unix millisecond timestamp 
+          value: item.value, // map to the right 
+        }));
+
+        // Return the array of values by resolving it:
+        resolve(result);
+      });
+
+    },
+    update(ctx, resolve, reject, payload) {
+      resolve(true);
+    },
+  };
+}
+```

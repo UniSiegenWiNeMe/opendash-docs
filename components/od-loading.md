@@ -1,18 +1,20 @@
 # od-loading Component
 
-`od-loading` ist ein Angular Component, der benutzt wird um die standart Ladeanimation von open.DASH anzuzeigen.
+`od-loading` is an Angular Component, which will display the open.DASH loading animation.
 
-## Benutzung
+## Usage
 
-Im Tempalte oberhalb des zu überdeckenden Content sollte folgendes Element eingebunden werden:
+Add the following element above your content in your template.
 
 ```html
 <od-loading ng-show="$ctrl.loading"></od-loading>
 ```
 
-Damit die Ladeanimation an- und ausgeschaltet werden kann, wird die [ng-show](https://docs.angularjs.org/api/ng/directive/ngShow) Direktive benutzt, an die ein BOOLEAN übergeben wird oder einfacher, wie im Beispiel weiter unten: Es wird eine Variable mit einem BOOLEAN übergeben.
+Use the [ng-show](https://docs.angularjs.org/api/ng/directive/ngShow) direktive to show/hide the animation.
 
 Im Controller wird diese Variable mit `true` initialiesiert und nach einer Sekunde wird die Ladeanimation beendet, indem die Variable auf `false` gesetzt wird.
+
+Initialize the attribute in your controller with `true` and disable the animation by setting the attribute to `false` as soon as everything is loaded. 
 
 ```js
 this.loading = true;
@@ -20,9 +22,9 @@ this.loading = true;
 $timeout(() => { this.loading = false; }, 1000);
 ```
 
-### Beispiel mit Scope
+### Example using $scope
 
-Das selbe Beispiel mit Scope, zur Nutzung in Modals.
+The same example using $scope:
 
 Template:
 
@@ -36,9 +38,9 @@ Javascript:
 $scope.loading = true;
 ```
 
-## Verhalten
+## Behavior
 
-Im Prinzip verhält sich `od-loading` wie ein `div` Element mit folgenden Eigenschaften:
+An `od-loading` element behaves like a `div` with the following css:
 
 ```css
 od-loading {

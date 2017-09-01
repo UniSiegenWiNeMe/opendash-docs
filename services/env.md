@@ -1,5 +1,7 @@
 # Env Service (od.env.service)
 
+The env service allows
+
 Mit dem Env Service kann man, ähnlich wie mit Umgebungsvariablen, die Instanz konfigurieren.
 
 <!-- TOC depthFrom:2 depthTo:3 -->
@@ -15,17 +17,13 @@ Mit dem Env Service kann man, ähnlich wie mit Umgebungsvariablen, die Instanz k
 
 2. Der Env Service kann geladen werden indem `od.env.service` über Angular injected wird. Es empfiehlt sich diesen dann mit dem Parameter Namen `$env` zu benutzen. Wichtig hierbei ist, dass $env kein richtiger Service ist, sondern eher eine einzelne Funktion.
 
-Beispiel:
+Example:
 
 ```js
 // Es wird eine Umgebungsvariable "BEISPIEL_ENV_VAR" eingefügt, mit dem Wert 1234.
-bootstrap({
-  // ...
-  env: {
-    'BEISPIEL_ENV_VAR': '1234',
-  },
-  // ...
-});
+const instance = new openDASH();
+
+instance.env('OD-EVENTS-LOG', true);
 ```
 
 ```js

@@ -1,0 +1,1 @@
+Custom styling is possible but not supported right now and will be added in the comming updates.

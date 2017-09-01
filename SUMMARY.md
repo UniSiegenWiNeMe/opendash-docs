@@ -1,16 +1,15 @@
 # Summary
 
-* [Einleitung](README.md)
-* [Dokumentation](dokumentation.md)
+* [Getting Started](README.md)
 
 ## Guides
 
-* [Instanz Entwicklung](guides/instanz-entwicklung.md)
-  - [User Adapter](guides/instanz-entwicklung/user-adapter.md)
-  - [Data Adapter](guides/instanz-entwicklung/data-adapter.md)
-  - [Widgets](guides/instanz-entwicklung/widgets.md)
-  - [Style](guides/instanz-entwicklung/style.md)
-* [Widget Entwicklung](guides/widget-entwicklung.md)
+* [Using the CLI](guides/using-the-cli.md)
+  - [User Adapter](guides/using-the-cli/user-adapter.md)
+  - [Data Adapter](guides/using-the-cli/data-adapter.md)
+  - [Widgets](guides/using-the-cli/widgets.md)
+  - [Style](guides/using-the-cli/style.md)
+* [Widget Entwicklung (outdated/german)](guides/widget-entwicklung.md)
 
 ## Components
 
@@ -19,13 +18,11 @@
 
 ## Services
 
-* [od.adapter.service](services/adapter.md)
-* [od.dashboard.service](services/dashboard.md)
-* [od.env.service](services/env.md)
-* [od.event.service](services/event.md)
-* [od.modal.service](services/modal.md)
-* [od.user.service](services/user.md)
+* [od.data.service](services/data.md)
+  - [OpenDashDataItem](services/data-item.md)
+  - [OpenDashDataContext](services/data-context.md)
 
 ## Sonstiges
 
-* [Breaking Changes](changes.md)
+* [Dokumentation (german)](dokumentation.md) (german)
+* [Breaking Changes](changes.md) (german)

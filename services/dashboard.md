@@ -50,18 +50,8 @@ Gibt `true` zurück.
 
 ### $dashboard.onWidgetResize(callback: Function)
 
-Event Listener: Wenn ein Widget seine Größe ändert wird die übergebene Funktion ausgeführt
-
-#### Parameter
-
-**callback** - Funktion die ausgeführt wird, wenn sich die Größe eines Widgets ändert.
+Deprecated - use the `od.event.service` instead.
 
 ```js
-$dashboard.onWidgetResize(() => {
-  // Mache etwas..
-});
+$event.on('od-widgets-resize', callback);
 ```
-
-#### Rückgabe
-
-Gibt nichts zurück.
