@@ -12,7 +12,7 @@ There are two ways to work with open.DASH. You can use our CLI to develop stand 
 
 ### Stand alone apps
 
-If you just want to use the open.DASH Dashboard for now, you might want to use our CLI Tools to generate an instance and then build it. To get started using the CLI, [click here](guides/using-the-cli.md).
+If you just want to use the open.DASH Dashboard for now, you might want to use our CLI Tools to generate an instance and then build it. To get started using the CLI, [click here](/guides/using-the-cli.md).
 
 ### open.DASH Class API
 

@@ -14,7 +14,7 @@ Is available to data adapters.
 
 ### OpenDashDataContext.get()
 
-Same as `$data.get()`. Returns an instance of [OpenDashDataItem](services/data-item.md).
+Same as `$data.get()`. Returns an instance of [OpenDashDataItem](/services/data-item.md).
 
 To set a new value to an item, use this method.
 
@@ -27,7 +27,7 @@ ctx.get('item.id').set('value', {
 
 ### OpenDashDataContext.create(payload: Object)
 
-Create a new [OpenDashDataItem](services/data-item.md) and save it in the data adapter.
+Create a new [OpenDashDataItem](/services/data-item.md) and save it in the data adapter.
 
 #### Parameter
 
@@ -37,5 +37,5 @@ The parameter should be and object will the following properties:
 - **type**: Type of the item.
 - **meta**: Object of meta information about the item, depending on type.
 - **parent**: (Optional) ID of the parent item.
-- **children**: Array with instances of [OpenDashDataItem](services/data-item.md) or `[]`; 
+- **children**: Array with instances of [OpenDashDataItem](/services/data-item.md) or `[]`; 
 

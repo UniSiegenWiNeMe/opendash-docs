@@ -13,7 +13,7 @@ Creating a widget is as easy as creating an instance. To create a widget use the
   Initialization of 'example' finished.
 ```
 
-Go ahead and customize the widget the way you want. If you want to learn more about widgets, check out the [Widget Guide](guides/widgets.md).
+Go ahead and customize the widget the way you want. If you want to learn more about widgets, check out the [Widget Guide](/guides/widgets.md).
 
 ## About the template
 

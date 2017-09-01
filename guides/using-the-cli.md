@@ -83,11 +83,11 @@ By default there is a npm script for running `opendash build -ws`, which is call
 
 Check the following links, to learn how to feed your instance with data and how to extend open.DASH with custom widgets.
 
-  - [Authenticate with the User Adapter](guides/using-the-cli/user-adapter.md)
-  - [Learn about Data Adapters](guides/using-the-cli/data-adapter.md)
-  - [Extend with custom Widgets](guides/using-the-cli/widgets.md)
-  - [Create your own Style](guides/using-the-cli/style.md)
-  - [Configurate by using the $env Service](services/env.md)
+  - [Authenticate with the User Adapter](/guides/using-the-cli/user-adapter.md)
+  - [Learn about Data Adapters](/guides/using-the-cli/data-adapter.md)
+  - [Extend with custom Widgets](/guides/using-the-cli/widgets.md)
+  - [Create your own Style](/guides/using-the-cli/style.md)
+  - [Configurate by using the $env Service](/services/env.md)
 
 ### Files
 
