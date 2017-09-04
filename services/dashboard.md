@@ -1,21 +1,27 @@
 # Dashboard Service (od.dashboard.service)
 
-Der Dashboard Service ist dazu da das Dashboard zu modifizieren, über diesen Service können Widgets hinzugefügt, gelöscht und bearbeitet werden. Außerdem ist es möglich zwischen verschiedenen Dashboards hin und her zu wechseln und die Daten des momentan ausgewählten Dashboards, sowie aller Dashboards einzusehen.
+The Dashboard Service allows you to:
+- Get a list of all dashboards.
+- Switch between dashboards.
+- Modify the current dashboard by creating, deleting and editing widgets.
 
+**Contents:**
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Nutzung](#nutzung)
-  - [$dashboard.addWidget(widget)](#dashboardaddwidgetwidget)
+- [Usage](#usage)
+  - [$dashboard.dasboards](#dashboarddasboards)
+  - [$dashboard.changeDashboard(name: String)](#dashboardchangedashboardname-string)
+  - [$dashboard.deleteCurrentDashboard()](#dashboarddeletecurrentdashboard)
+  - [$dashboard.addWidget(widget: OpenDashWidget)](#dashboardaddwidgetwidget-opendashwidget)
   - [$dashboard.onWidgetResize(callback: Function)](#dashboardonwidgetresizecallback-function)
 
 <!-- /TOC -->
 
-## Nutzung
+## Usage
 
-Der Dashboard Service kann benutzt werden indem `od.dashboard.service` über Angular injected wird. Es empfiehlt sich diesen dann mit dem Parameter Namen `$dashboard` zu benutzen.
+Use the Dashboard Service by injecting `od.dashboard.service` as an Angular Service. We suggest using `$dashboard` as a name for the variable.
 
-Beispiel:
-
+Example:
 ```js
 class controller {
 
@@ -27,26 +33,48 @@ class controller {
 }
 ```
 
-### $dashboard.addWidget(widget)
+### $dashboard.dasboards
 
-Fügt ein Widget zum moment aktiven Dashboard hinzu.
+An array listing all existing dashboards.
+
+### $dashboard.changeDashboard(name: String)
+
+Will change the dashboard depending on the given name.
+
+#### Response
+
+Nothing will happen, if you try to change to the current dashboard.
+
+If a dashboard with the given name exists, the existing dashboard will be loaded, otherwise the dashboard will be created. Either way the browser will do a reload.
+
+### $dashboard.deleteCurrentDashboard()
+
+Use this method to delete the current dashboard.
+
+#### Response
+
+The browser will reload.
+
+### $dashboard.addWidget(widget: OpenDashWidget)
+
+Adds a widget to the current dashboard.
 
 #### Parameter
 
-**widget** - Objekt das die Daten zum erstellen des Widgets speichert.
+**widget** - Object which looks like this:
 
 ```js
 {
-  name: 'Widget Name', // Name der im Dashboard angezeigt wird.
-  type: 'widget-type', // Typ von dem ein Widget erzeugt wird.
-  grid: [0,0,0,0], // Höhe, Breite, Y- und X- Koordinate. Sollte nicht manuell gesetzt werden.
-  config: {}, // Konfigurations Objekt, das an das Widget übergeben wird.
+  name: 'Widget Name', // Display name of the widget
+  type: 'widget-type', // Type of the widget
+  grid: [0,0,0,0], // Height, Width, Y- und X- coordinate. Should not be set.
+  config: {}, // Config which will be used by the widget.
 }
 ```
 
-#### Rückgabe
+#### Response
 
-Gibt `true` zurück.
+Returns `true` if the widget was added to the dashboard, `false` if not.
 
 ### $dashboard.onWidgetResize(callback: Function)
 
