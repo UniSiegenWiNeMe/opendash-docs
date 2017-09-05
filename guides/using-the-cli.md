@@ -14,15 +14,9 @@
 
 <!-- /TOC -->
 
-## Prerequisites
-
-You need to install nodejs version `>=7.6.0` and should use npm version `>=5.3.0` (`npm i -g npm@latest`).
-
-You can check your node version by using `node -v` and your npm version by running `npm -v`.
-
-This guide assumes that you know ES2015 Javascript language features like const/let, arrow functions and classes, how to work with Angularjs `^1.5`, especially components and services are important. It's also important to know, how build tools like web pack work.
 
 ## Getting started
+When you have been following the [Prerequisites](), you are good to go!
 
 First thing you need to do is to install the open.DASH CLI globaly by using NPM.
 
