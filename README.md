@@ -1,4 +1,4 @@
-# Wellcome to the open.DASH Documentation
+# Welcome to the open.DASH Documentation
 
 This page is still under construction.
 
