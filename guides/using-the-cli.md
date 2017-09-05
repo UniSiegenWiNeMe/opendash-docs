@@ -1,22 +1,23 @@
 # Using the CLI to create a stand alone open.DASH instance
 
-<!-- TOC depthFrom:2 depthTo:6 -->
+When you have been following the [Prerequisites](../README.md#prerequisites), you are good to go!
 
-- [Prerequisites](#prerequisites)
-- [Getting started](#getting-started)
-  - [Creating an instance of open.DASH](#creating-an-instance-of-opendash)
-  - [Building](#building)
-  - [Next steps](#next-steps)
-  - [Files](#files)
-    - [package.json](#packagejson)
-    - [index.html](#indexhtml)
-    - [app.js](#appjs)
+All following commands are to be entered into console.
+
+<!-- TOC depthFrom:2 depthTo:6 -->
+- [Installing the CLI](#installing-the-cli)
+- [Creating an instance](#creating-an-instance)
+- [Building the instance](#building-the-instance)
+- [Next steps](#next-steps)
+- [Files](#files)
+  - [package.json](#packagejson)
+  - [index.html](#indexhtml)
+  - [app.js](#appjs)
 
 <!-- /TOC -->
 
 
-## Getting started
-When you have been following the [Prerequisites](), you are good to go!
+## Installing the CLI
 
 First thing you need to do is to install the open.DASH CLI globaly by using NPM.
 
@@ -24,9 +25,10 @@ First thing you need to do is to install the open.DASH CLI globaly by using NPM.
 > npm install -g opendash-cli
 ```
 
-### Creating an instance of open.DASH
+## Creating an instance
 
 Once this is done, change in a directory where you want to build your app and run the `opendash init` command to create a new open.DASH instance.
+Note: open.DASH will create a folder of the instance during installation, so no need to create a folder yourself.
 
 A few questions will be asked and the output will look something like this:
 
@@ -41,7 +43,7 @@ A few questions will be asked and the output will look something like this:
   Initialization of 'example' finished.
 ```
 
-In this case a directory called `opendash-instance-example` was created, the next step is to change in this directory and open it with your prefered editor (We like VS Code).
+In this case a directory called `opendash-instance-example` was created, the next step is to change in this directory and open it with your preferred editor (We like VS Code).
 
 You will see a folder structure like this:
 
@@ -61,19 +63,23 @@ You will see a folder structure like this:
 └── package.json
 ```
 
-### Building
+## Building the instance
 
-Before building your instance you have to run `npm install` to load all the dependencies.
+In Console, navigate into the folder of your open.DASH instance.
 
-Once everything is ready you just have to run `opendash build`, which is the same as running `npm run build`.
+Before building your instance you have to run `npm install` to load all the dependencies in the instance folder.
 
-If you want the build tool to watch for changes you make and build every time, use the `--watch` flag (short: `-w`).
+To test your build, run `opendash build` or `npm run build`.
 
-To start a simple web-server, which serves your instance, use the `--serve` flag (short: `-s`). If you want your browser to open use `-o` and to change the port `--port 8080`.
+To test the behaviour of your build, you can start a simple web server for your open.DASH instance adding the `--serve` flag (short: `-s`) to your build statement.
+Additionally, you can automatically open your browser by adding `-o` and specify the port by adding `--port 8080`.
 
-By default there is a npm script for running `opendash build -ws`, which is called `watch`: `npm run watch`.
+If you want the build tool to watch for changes you make and build every time a change is detected, use the `--watch` flag (short: `-w`).
+This way, you do not have to rebuild once you change the widgets or the instance intsself.
 
-### Next steps
+For your convenience, we added a npm script running `opendash build -ws`: Its called `npm run watch`.
+
+## Next steps
 
 Check the following links, to learn how to feed your instance with data and how to extend open.DASH with custom widgets.
 
@@ -83,9 +89,9 @@ Check the following links, to learn how to feed your instance with data and how 
   - [Create your own Style](/guides/using-the-cli/style.md)
   - [Configurate by using the $env Service](/services/env.md)
 
-### Files
+## Files
 
-#### package.json
+### package.json
 
 ```json
 {
@@ -96,7 +102,7 @@ Check the following links, to learn how to feed your instance with data and how 
 }
 ```
 
-#### index.html
+### index.html
 
 ```html
 <!DOCTYPE html>
@@ -118,7 +124,7 @@ Check the following links, to learn how to feed your instance with data and how 
 </html>
 ```
 
-#### app.js
+### app.js
 
 ```js
 import openDASH from 'opendash';
