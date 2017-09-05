@@ -1,6 +1,6 @@
 # od-loading Component
 
-`od-loading` is an Angular Component, which will display the open.DASH loading animation.
+`od-loading` is an Angular Component, which will display the open.DASH loading animation, in case a widget has not completed build, i.e. when data is still being retrieved or graphs are still being rendered.
 
 ## Usage
 
@@ -11,8 +11,6 @@ Add the following element above your content in your template.
 ```
 
 Use the [ng-show](https://docs.angularjs.org/api/ng/directive/ngShow) direktive to show/hide the animation.
-
-Im Controller wird diese Variable mit `true` initialiesiert und nach einer Sekunde wird die Ladeanimation beendet, indem die Variable auf `false` gesetzt wird.
 
 Initialize the attribute in your controller with `true` and disable the animation by setting the attribute to `false` as soon as everything is loaded. 
 
