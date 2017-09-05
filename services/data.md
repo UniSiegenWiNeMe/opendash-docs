@@ -10,7 +10,7 @@ The data service allows you to pull data from all registered data adapters at th
 
 <!-- /TOC -->
 
-## Usage
+# Usage
 
 Use the Data Service by injecting `od.data.service` as an Angular Service. We suggest using `$data` as a name for the variable.
 
@@ -26,7 +26,7 @@ class controller {
 }
 ```
 
-### $data.list() (sync)
+# $data.list() (sync)
 
 Returns all open.DASH data items.
 
@@ -34,11 +34,11 @@ Returns all open.DASH data items.
 let items = $data.list();
 ```
 
-#### Response
+## Response
 
 Returns an Array containing all instances of [OpenDashDataItem](/services/data-item.md).
 
-### $data.get(id: String) (sync)
+# $data.get(id: String) (sync)
 
 Returns a single open.DASH data item.
 
@@ -50,6 +50,6 @@ if(!item) {
 }
 ```
 
-#### Response
+## Response
 
 Returns an instance of [OpenDashDataItem](/services/data-item.md) if there is an item with the given id, if not `null` is returned.
