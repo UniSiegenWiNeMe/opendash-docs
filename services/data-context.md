@@ -10,9 +10,9 @@ Is available to data adapters.
 
 <!-- /TOC -->
 
-## Usage
+# Usage
 
-### OpenDashDataContext.get()
+## OpenDashDataContext.get()
 
 Same as `$data.get()`. Returns an instance of [OpenDashDataItem](/services/data-item.md).
 
@@ -25,11 +25,11 @@ ctx.get('item.id').set('value', {
 });
 ```
 
-### OpenDashDataContext.create(payload: Object)
+## OpenDashDataContext.create(payload: Object)
 
 Create a new [OpenDashDataItem](/services/data-item.md) and save it in the data adapter.
 
-#### Parameter
+### Parameter
 
 The parameter should be and object will the following properties:
 
