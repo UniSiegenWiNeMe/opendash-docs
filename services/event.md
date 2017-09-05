@@ -79,15 +79,15 @@ $event.once('od-dashboard-ready', () => {
 
 No return.
 
-### $event.on(events: Array, callback: Function)
+### $event.once(events: Array, callback: Function)
 
 ```js
-$event.on(events, callback);
+$event.once(events, callback);
 
 // is the same as:
 
 events.forEach(event => {
-  $event.on(event, callback);
+  $event.once(event, callback);
 });
 ```
 

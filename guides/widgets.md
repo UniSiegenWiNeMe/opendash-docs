@@ -37,9 +37,24 @@ instance.registerWidgets([
 ]);
 ```
 
-## Widget constructor
+## Widget factory
 
-Each widget you pass into the `registerWidget()` method, needs to be a function (widget constructor) which returns the widget object.
+Each widget you pass into the `registerWidget()` method, needs to be a function (widget factory) which returns the widget object.
+
+```js
+// widget factory
+export default (options) => {
+  // widget object
+  return {
+    name,
+    widgetController,
+    widgetTemplate,
+    settingsController,
+    settingsTemplate,
+    presets,
+  };
+};
+```
 
 ## Widget object
 

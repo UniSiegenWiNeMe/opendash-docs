@@ -47,3 +47,37 @@ This template is meant to be an easy way to start a new widget with an opinionat
 For development, use the [npm link](https://docs.npmjs.com/cli/link) command:
 (EXPAND THIS SECTION: which folder in?)
 `npm run link` 
+
+Why? Widgets built using the CLI should be installed by npm but you don't want to hit `npm update` each time you make a change to a widget. Linking the widget creates a symlink in your `node_modules` folder, so your widgets will allways be up to date.
+
+Sometimes there is another problem: Sometimes you can't simply publish your widgets to npm. Our approach is to keep them in a seperate folder, next to the instance.
+
+```
+├── instance/
+└── widgets/
+    ├── opendash-widget-example/
+    └── opendash-widget-another-example/
+```
+
+In the `package.json` of our instance we saved the widgets as local dependencies, which are marked with the prefix `file:`
+
+```json
+{
+  "dependencies": {
+    "opendash-widget-example": "file:../widgets/opendash-widget-example",
+    "opendash-widget-another-example": "file:../widgets/opendash-widget-another-example"
+  }
+}
+```
+
+When we got more and more widgets we found the package [linklocal](https://www.npmjs.com/package/linklocal) very usefull. Install it as a dev dependency by running `npm i -D linklocal` and add a [npm post install script](https://docs.npmjs.com/misc/scripts) like this in the `package.json`:
+
+```json
+{
+  "scripts": {
+    "postinstall": "linklocal"
+  }
+}
+```
+
+Now when you run `npm install`, all your local dependencies should be linked automatically. If this doesn't work for you, give the script a diffrent name and run it manually.

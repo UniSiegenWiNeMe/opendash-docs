@@ -9,6 +9,7 @@
   - [Data Adapter](/guides/using-the-cli/data-adapter.md)
   - [Widgets](/guides/using-the-cli/widgets.md)
   - [Style](/guides/using-the-cli/style.md)
+* [Widgets](/guides/widgets.md)
 * [Widget Entwicklung (outdated/german)](/guides/widget-entwicklung.md)
 
 ## Components
