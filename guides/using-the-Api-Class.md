@@ -2,7 +2,7 @@
 HERE BE TEXT
 ## Installation
 
-After completing the [Prerequisites](), you have everything you need.
+After completing the [Prerequisites](../README.md#prerequisites), you have everything you need.
 Now pull opendash from npm by typing in your command line:
 
 ```
@@ -11,7 +11,9 @@ npm install --save opendash
 
 This should work from every folder, since npm is installed globally on your machine.
 
-Then, get the open.DASH Class by requiring it in the file xou want to use open.DASH in. Secondly, create an instance to be able to use the API (IN WHICH FILE??).
+Then, get the open.DASH Class by requiring it in the file xou want to use open.DASH in. Secondly, create an instance to be able to use the API 
+
+TODO: SPECIFY FILE.
 
 
 ```js
