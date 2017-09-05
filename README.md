@@ -12,7 +12,7 @@ open.DASH ist an open source visualization framework written mainly in javascrip
 Either way you want to work with open.DASH, you need to 
 
 - install [nodejs](https://nodejs.org/en/) version  `>=7.6.0` and 
-- use [npm](https://www.npmjs.com) version `>=5.3.0` (console: `npm i -g npm@latest`).
+- use [npm](https://www.npmjs.com/get-npm) version `>=5.3.0` (console: `npm i -g npm@latest`).
 
 npm is a JavaScript package manager, that is very popular in Node.js development. It allows you to pull packages, other developers have created. We also use it for open.DASH, which is why you can it from there to start working. 
 
