@@ -5,7 +5,7 @@ Instances of OpenDashDataItem will be returned by the $data service.
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Usage](#usage)
-  - [Properties](#properties)
+- [Properties](#properties)
   - [OpenDashDataItem.value](#opendashdataitemvalue)
   - [OpenDashDataItem.history(options: Object)](#opendashdataitemhistoryoptions-object)
   - [OpenDashDataItem.watch(callback: Function)](#opendashdataitemwatchcallback-function)
@@ -13,7 +13,7 @@ Instances of OpenDashDataItem will be returned by the $data service.
 
 <!-- /TOC -->
 
-## Usage
+# Usage
 
 Use the $data service to get an instance of OpenDashDataItem. In the following example `item` will be an OpenDashDataItem.
 
@@ -29,7 +29,7 @@ class controller {
 }
 ```
 
-### Properties
+# Properties
 
 - **id**: Unique ID of the item.
 - **type**: Type of the item.
@@ -38,7 +38,7 @@ class controller {
 - **children**: Array with instances of `OpenDashDataItem` or `[]`;
 - **value**: See below:
 
-### OpenDashDataItem.value
+## OpenDashDataItem.value
 
 Returns the current value of the item, doesn't take a parameter.
 
@@ -46,7 +46,7 @@ Returns the current value of the item, doesn't take a parameter.
 item.value;
 ```
 
-#### Response
+### Response
 
 Returns an Object with two keys: date and value. Where date is a unix millisecond timestamp and value is depending on the type of the item.
 
@@ -57,11 +57,11 @@ Returns an Object with two keys: date and value. Where date is a unix millisecon
 }
 ```
 
-### OpenDashDataItem.history(options: Object)
+## OpenDashDataItem.history(options: Object)
 
 Returns historical values of the item.
 
-#### Parameter
+### Parameter
 
 **options**: Object with options to request data between two dates by using `options.start` and `options.end` or between now and a given date by using `options.since` or `options.value` and `options.unit`.
 
@@ -93,7 +93,7 @@ let promise = item.history({
 });
 ```
 
-**Mit `options.since`:**
+**With `options.since`:**
 
 `options.since` must be [momentjs](http://momentjs.com/) objects or values which will be accepted by the [momentjs constructor](http://momentjs.com/docs/#/parsing/).
 
@@ -104,7 +104,7 @@ let promise = item.history({
 });
 ```
 
-**Mit `options.value` und `options.unit`:**
+**With `options.value` und `options.unit`:**
 
 `options.value` and `options.unit` will be used in `moment().subtract(options.value, options.unit)` and will be saved in `options.since`.
 
@@ -116,7 +116,7 @@ let promise = item.history({
 });
 ```
 
-#### Response
+### Response
 
 A Promise will be returned, which resolves to an array of values.
 
@@ -141,17 +141,17 @@ promise.then(null, err => {
 });
 ```
 
-### OpenDashDataItem.watch(callback: Function)
+## OpenDashDataItem.watch(callback: Function)
 
 Use the watch method to register a callback which will be called whenever a value changes.
 
-#### Parameter
+### Parameter
 
 **callback**: Function which will be called, when a value changes.
 
 The callback will be called with three parameters: key, newValue and oldValue.
 
-#### Example
+### Example
 
 ```js
 item.watch((key, newValue, oldValue) => {
@@ -161,15 +161,15 @@ item.watch((key, newValue, oldValue) => {
 });
 ```
 
-#### Response
+### Response
 
 No response.
 
-### OpenDashDataItem.set(key: String, value: Any, save: Boolean, saveForUser: Boolean)
+## OpenDashDataItem.set(key: String, value: Any, save: Boolean, saveForUser: Boolean)
 
 Set a new value for a given property.
 
-#### Parameter
+### Parameter
 
 - **key**: Key which identifies the property which will be changed.
 - **value**: The new value.
@@ -188,6 +188,6 @@ item.set('value', {
   value: 'Some value', // Depending on item type.
 });
 ```
-#### Response
+### Response
 
 No response.
