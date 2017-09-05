@@ -2,7 +2,13 @@
 
 An instance of open.DASH can have one or more data adapters.
 
-Data adapters are Angular Services, for more information check out the official documentation about Angular Services.
+Data adapters are Angular Services, for more information about Angular Services, check out the official documentation.
+
+In open.DASH they are used to normalize data provision by external web services to a format readable for open.DASH.
+
+It especially must be able to receive all items, you have data for and respective time-based value data.
+
+After getting the adapter to work, you will already be able to see your items in open.DASH and use predefined visualizations.
 
 ## Example
 
