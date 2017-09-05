@@ -1,6 +1,9 @@
+# Whats a widget in open.DASH
+being a dashboard, open.DASH allows you to visualize data in most different ways, just according to your needs and allows you to add new ways of displaying information. For this, we use widgets. Widgets are like tiles on your dashboard and can be programmed to both use the items and data provided by the adapter, and rely on external information, libraries etc. from the web.
+
 # Creating widgets using the CLI
 
-Creating a widget is as easy as creating an instance. To create a widget use the same `opendash init` command but as the template select `widget`:
+Creating a widget is as easy as creating an instance. To create a widget use the same opendash init command but as the template select widget: `opendash init widget` 
 
 ```
 > opendash init widget
@@ -41,4 +44,6 @@ This template is meant to be an easy way to start a new widget with an opinionat
 
 ## Linking widgets for development.
 
-For development it's a good idea to use the [npm link](https://docs.npmjs.com/cli/link) command.
+For development, use the [npm link](https://docs.npmjs.com/cli/link) command:
+(EXPAND THIS SECTION: which folder in?)
+`npm run link` 
