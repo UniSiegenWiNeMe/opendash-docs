@@ -10,7 +10,6 @@
   - [Widgets](/guides/using-the-cli/widgets.md)
   - [Style](/guides/using-the-cli/style.md)
 * [Widgets](/guides/widgets.md)
-* [Widget Entwicklung (outdated/german)](/guides/widget-entwicklung.md)
 
 ## Components
 
@@ -20,14 +19,18 @@
 ## Services
 
 * [od.data.service](/services/data.md)
-  - [OpenDashDataItem](/services/data-item.md)
-  - [OpenDashDataContext](/services/data-context.md)
 * [od.dashboard.service](/services/dashboard.md)
 * [od.env.service](/services/env.md)
 * [od.event.service](/services/event.md)
 * [od.modal.service](/services/modal.md)
+* [od.adapter.service](/services/adapter.md)
 
-## Sonstiges
+## Classes
 
-* [Dokumentation (german)](/dokumentation.md) (german)
+* [OpenDashDataItem](/classes/data-item.md)
+* [OpenDashDataContext](/classes/data-context.md)
+
+## Other
+
+* [About the documentation](/about-the-docs.md) (german)
 * [Breaking Changes](/changes.md) (german)

@@ -9,6 +9,7 @@ The Dashboard Service allows you to:
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Usage](#usage)
+- [Properties & Methods](#properties--methods)
   - [$dashboard.dasboards](#dashboarddasboards)
   - [$dashboard.changeDashboard(name: String)](#dashboardchangedashboardname-string)
   - [$dashboard.deleteCurrentDashboard()](#dashboarddeletecurrentdashboard)
@@ -32,6 +33,8 @@ class controller {
   }
 }
 ```
+
+## Properties & Methods
 
 ### $dashboard.dasboards
 

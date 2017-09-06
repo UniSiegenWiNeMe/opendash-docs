@@ -36,7 +36,7 @@ let items = $data.list();
 
 ## Response
 
-Returns an Array containing all instances of [OpenDashDataItem](/services/data-item.md).
+Returns an Array containing all instances of [OpenDashDataItem](/classes/data-item.md).
 
 # $data.get(id: String) (sync)
 
@@ -52,4 +52,4 @@ if(!item) {
 
 ## Response
 
-Returns an instance of [OpenDashDataItem](/services/data-item.md) if there is an item with the given id, if not `null` is returned.
+Returns an instance of [OpenDashDataItem](/classes/data-item.md) if there is an item with the given id, if not `null` is returned.

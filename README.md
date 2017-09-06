@@ -3,7 +3,8 @@
 This page is still under construction.
 
 ## About open.DASH
-HERE BE INTRO TEXT
+
+TODO: HERE BE INTRO TEXT
 
 open.DASH ist an open source visualization framework written mainly in javascript. 
 

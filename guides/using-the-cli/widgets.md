@@ -44,9 +44,7 @@ This template is meant to be an easy way to start a new widget with an opinionat
 
 ## Linking widgets for development.
 
-For development, use the [npm link](https://docs.npmjs.com/cli/link) command:
-(EXPAND THIS SECTION: which folder in?)
-`npm run link` 
+For development it's a good idea to use the [npm link](https://docs.npmjs.com/cli/link) command.
 
 Why? Widgets built using the CLI should be installed by npm but you don't want to hit `npm update` each time you make a change to a widget. Linking the widget creates a symlink in your `node_modules` folder, so your widgets will allways be up to date.
 
