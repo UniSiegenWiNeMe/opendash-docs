@@ -4,7 +4,8 @@ This guide will show you how to create and use the open.DASH Class to create an 
 
 This guide assumes that you have a build process up and running. If you don't want to use open.DASH in an existing angularjs app, you might want to read the [Using the CLI](/guides/using-the-cli.md) guide.
 
-<!-- TOC depthFrom:2 depthTo:6 -->
+**Contents:**
+<!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Installation](#installation)
 - [Usage](#usage)

@@ -8,6 +8,17 @@ It especially must be able to receive all items, you have data for and respectiv
 
 After getting the adapter to work, you will already be able to see your items in open.DASH and use predefined visualizations.
 
+**Contents:**
+<!-- TOC depthFrom:2 depthTo:3 -->
+
+- [Creating a Data Adapter](#creating-a-data-adapter)
+  - [Adapter Factory](#adapter-factory)
+  - [Adapter Object](#adapter-object)
+  - [Registering the Data Adapter](#registering-the-data-adapter)
+- [Example](#example)
+
+<!-- /TOC -->
+
 ## Creating a Data Adapter
 
 ### Adapter Factory

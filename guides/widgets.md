@@ -2,6 +2,22 @@
 
 Once you have setup your user and data adapter, you want your users to access all the information. In open.DASH you do this by providing widgets, which can be used by your users, so they can customize their dashboards.
 
+**Contents:**
+<!-- TOC depthFrom:2 depthTo:3 -->
+
+- [instance.registerWidget()](#instanceregisterwidget)
+  - [instance.registerWidgets()](#instanceregisterwidgets)
+- [Widget factory](#widget-factory)
+- [Widget object](#widget-object)
+  - [name](#name)
+  - [widgetController](#widgetcontroller)
+  - [widgetTemplate](#widgettemplate)
+  - [settingsController](#settingscontroller)
+  - [settingsTemplate](#settingstemplate)
+  - [presets](#presets)
+
+<!-- /TOC -->
+
 ## instance.registerWidget()
 
 Once you have an instance, you can `import` widgets and register them:

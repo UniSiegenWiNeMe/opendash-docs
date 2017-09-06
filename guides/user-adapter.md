@@ -2,6 +2,15 @@
 
 Custom user adapters are possible but not supported right now and will be added in the comming updates.
 
+**Contents:**
+<!-- TOC depthFrom:2 depthTo:3 -->
+
+- [Prebuild User Adapters](#prebuild-user-adapters)
+  - [Local User Adapter](#local-user-adapter)
+  - [Baasbox User Adapter](#baasbox-user-adapter)
+
+<!-- /TOC -->
+
 ## Prebuild User Adapters
 
 There are some adapters ready to use right now:

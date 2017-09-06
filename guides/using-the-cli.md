@@ -6,7 +6,8 @@ If you allready have a build process up and running and just want to use the ope
 
 All following commands are to be entered into console.
 
-<!-- TOC depthFrom:2 depthTo:6 -->
+**Contents:**
+<!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Prerequisites](#prerequisites)
 - [Installing the CLI](#installing-the-cli)
