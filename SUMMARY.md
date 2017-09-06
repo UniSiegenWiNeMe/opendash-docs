@@ -4,11 +4,12 @@
 
 ## Guides
 
+* [Using the API](/guides/using-the-api.md)
 * [Using the CLI](/guides/using-the-cli.md)
-  - [User Adapter](/guides/using-the-cli/user-adapter.md)
-  - [Data Adapter](/guides/using-the-cli/data-adapter.md)
   - [Widgets](/guides/using-the-cli/widgets.md)
   - [Style](/guides/using-the-cli/style.md)
+* [User Adapter](/guides/user-adapter.md)
+* [Data Adapter](/guides/data-adapter.md)
 * [Widgets](/guides/widgets.md)
 
 ## Components

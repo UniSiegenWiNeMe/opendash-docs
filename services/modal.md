@@ -10,6 +10,7 @@ The modal services allows you to:
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Usage](#usage)
+- [Properties & Methods](#properties--methods)
   - [$dashboard.confirm(message: String)](#dashboardconfirmmessage-string)
   - [$dashboard.prompt(message: String)](#dashboardpromptmessage-string)
   - [$dashboard.showModal(options)](#dashboardshowmodaloptions)
@@ -31,6 +32,8 @@ class controller {
   }
 }
 ```
+
+## Properties & Methods
 
 ### $dashboard.confirm(message: String)
 

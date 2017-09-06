@@ -9,10 +9,11 @@ The event services allows you to:
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Usage](#usage)
+- [Properties & Methods](#properties--methods)
   - [$event.on(event: String, callback: Function)](#eventonevent-string-callback-function)
   - [$event.on(events: Array, callback: Function)](#eventonevents-array-callback-function)
   - [$event.once(event: String, callback: Function)](#eventonceevent-string-callback-function)
-  - [$event.on(events: Array, callback: Function)](#eventonevents-array-callback-function-1)
+  - [$event.once(events: Array, callback: Function)](#eventonceevents-array-callback-function)
   - [$event.emit(event: String)](#eventemitevent-string)
   - [$event.emit(event: Array)](#eventemitevent-array)
 - [Core Events](#core-events)
@@ -34,6 +35,8 @@ class controller {
   }
 }
 ```
+
+## Properties & Methods
 
 ### $event.on(event: String, callback: Function)
 
