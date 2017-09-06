@@ -83,7 +83,6 @@ Returns historical values of the item.
 - String: a 'second' (shortcut: 's', 'seconds')
 - String: a 'millisecond' (shortcut: 'ms', 'milliseconds')
 - Number: Aggregation in milliseconds.
-- Number: 0 - No aggregation.
 
 **Using `options.start` and `options.end`:**
 

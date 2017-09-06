@@ -4,7 +4,7 @@ Is available to data adapters.
 
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Usage](#usage)
+- [Methods](#methods)
   - [OpenDashDataContext.get()](#opendashdatacontextget)
   - [OpenDashDataContext.create(payload: Object)](#opendashdatacontextcreatepayload-object)
 
@@ -38,4 +38,5 @@ The parameter should be and object will the following properties:
 - **meta**: Object of meta information about the item, depending on type.
 - **parent**: (Optional) ID of the parent item.
 - **children**: Array with instances of [OpenDashDataItem](/classes/data-item.md) or `[]`; 
+- **value**: (Optional) Value Object for the current value.
 
