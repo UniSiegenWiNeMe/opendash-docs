@@ -1,4 +1,4 @@
-# Dashboard Service (od.dashboard.service)
+# Event Service (od.event.service)
 
 The event services allows you to:
 - Emit events
@@ -22,15 +22,15 @@ The event services allows you to:
 
 ## Usage
 
-Use the Event Service by injecting `od.env.service` as an Angular Service. We suggest using `$env` as a name for the variable.
+Use the Event Service by injecting `od.event.service` as an Angular Service. We suggest using `$event` as a name for the variable.
 
 Example:
 ```js
 class controller {
 
-  static $inject = ['od.env.service'];
+  static $inject = ['od.event.service'];
 
-  constructor($env) {
+  constructor($event) {
     // ...
   }
 }

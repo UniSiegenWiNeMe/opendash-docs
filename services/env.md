@@ -17,7 +17,7 @@ The env service allows you to use and register global environment variables, to 
 
 > Note: The $env service is not a real service, as it's a single function, instead of a class.
 
-1. When creating a new instance of open.DASH, the instance has access to the env service using the `env` method of the instance.
+- When creating a new instance of open.DASH, the instance has access to the env service using the `env` method of the instance.
 
 Example:
 
@@ -28,7 +28,7 @@ const instance = new openDASH();
 instance.env('OD-EVENTS-LOG', true);
 ```
 
-2. Use the Env Service by injecting `od.env.service` as an Angular Service. We suggest using `$env` as a name for the variable.
+- Use the Env Service by injecting `od.env.service` as an Angular Service. We suggest using `$env` as a name for the variable.
 
 Example:
 
