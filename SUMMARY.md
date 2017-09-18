@@ -11,6 +11,7 @@
 * [User Adapter](/guides/user-adapter.md)
 * [Data Adapter](/guides/data-adapter.md)
 * [Widgets](/guides/widgets.md)
+* [Customization](/guides/env.md)
 
 ## Components
 
