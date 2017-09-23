@@ -20,7 +20,7 @@ Once you have setup your user and data adapter, you want your users to access al
 
 ## instance.registerWidget()
 
-Once you have an instance, you can `import` widgets and register them:
+Once you have an instance, you can `import` widgets and register them in your instance. You do this in app/js/app.js:
 
 ```js
 import exampleWidget from 'opendash-widget-example';
@@ -54,7 +54,6 @@ instance.registerWidgets([
 ```
 
 ## Widget factory
-
 Each widget you pass into the `registerWidget()` method, needs to be a function (widget factory) which returns the widget object.
 
 ```js
