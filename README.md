@@ -10,7 +10,7 @@ open.DASH ist an open source visualization framework written mainly in javascrip
 
 There are two ways to work with open.DASH:
  - [Use our Command Line Interface (CLI)](/guides/using-the-cli.md) to use open.DASH for developing your own visualizations as stand alone
- - [Use our library](/guides/using-the-Api-Class.md) to generate an Angularjs module to use in your existing Angularjs application.
+ - [Use our library](/guides/using-the-api.md) to generate an Angularjs module to use in your existing Angularjs application.
  
 
 
