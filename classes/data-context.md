@@ -37,6 +37,5 @@ The parameter should be and object will the following properties:
 - **type**: Type of the item.
 - **meta**: Object of meta information about the item, depending on type.
 - **parent**: (Optional) ID of the parent item.
-- **children**: Array with instances of [OpenDashDataItem](/classes/data-item.md) or `[]`; 
 - **value**: (Optional) Value Object for the current value.
 
