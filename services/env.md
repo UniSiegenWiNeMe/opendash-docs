@@ -1,32 +1,36 @@
 # Env Service (od.env.service)
 
-Mit dem Env Service kann man, ähnlich wie mit Umgebungsvariablen, die Instanz konfigurieren.
+The env service allows you to use and register global environment variables, to configurate your instance.
 
+**Contents:**
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Nutzung](#nutzung)
-  - [$env(key: String)](#envkey-string)
+- [Usage](#usage)
+  - [$env(name: String)](#envname-string)
+  - [$env(name: String, value: Any)](#envname-string-value-any)
+  - [$env(name: String, null, defaultValue: Any)](#envname-string-null-defaultvalue-any)
+- [Example](#example)
 
 <!-- /TOC -->
 
-## Nutzung
+## Usage
 
-1. Bei der Erstellung einer Instanz kann in das Objekt, welches an die bootstrap Methode übergeben wird, ein Schlüssel *env* eingefügt werden, der ein Objekt hält.
+> Note: The $env service is not a real service, as it's a single function, instead of a class.
 
-2. Der Env Service kann geladen werden indem `od.env.service` über Angular injected wird. Es empfiehlt sich diesen dann mit dem Parameter Namen `$env` zu benutzen. Wichtig hierbei ist, dass $env kein richtiger Service ist, sondern eher eine einzelne Funktion.
+- When creating a new instance of open.DASH, the instance has access to the env service using the `env` method of the instance.
 
-Beispiel:
+Example:
 
 ```js
-// Es wird eine Umgebungsvariable "BEISPIEL_ENV_VAR" eingefügt, mit dem Wert 1234.
-bootstrap({
-  // ...
-  env: {
-    'BEISPIEL_ENV_VAR': '1234',
-  },
-  // ...
-});
+const instance = new openDASH();
+
+// Set the OD-EVENTS-LOG environment variable
+instance.env('OD-EVENTS-LOG', true);
 ```
+
+- Use the Env Service by injecting `od.env.service` as an Angular Service. We suggest using `$env` as a name for the variable.
+
+Example:
 
 ```js
 class controller {
@@ -34,19 +38,57 @@ class controller {
   static $inject = ['od.env.service'];
 
   constructor($env) {
-    $env('BEISPIEL_ENV_VAR'); // => '1234'
+    // Get the OD-EVENTS-LOG environment variable
+    let logging = $env('OD-EVENTS-LOG');
   }
 }
 ```
 
-### $env(key: String)
+### $env(name: String)
 
-Fragt einen Schlüssel ab.
+Get the environment variable with given name.
 
 #### Parameter
 
-**key** - Schlüssel vom Typ String der abgefragt werden soll.
+**name** - String which identifies the environment variable.
 
-#### Rückgabe
+#### Response
 
-Gibt den Wert des Schlüssels zurück. Wirf einen Error, wenn der Schlüssel nicht vorhanden ist.
+Returns the value of the environment variable, if the environment variable is not set, an error will be thrown.
+
+### $env(name: String, value: Any)
+
+Sets a new value for the environment variable with given name.
+
+#### Parameter
+
+**name** - String which identifies the environment variable.
+**value** - Anything you want to store in the environment variable.
+
+#### Response
+
+No response.
+
+### $env(name: String, null, defaultValue: Any)
+
+Get the environment variable with given name, if there is no response the value of defaultValue will be taken.
+
+#### Parameter
+
+**name** - String which identifies the environment variable.
+**null** - Simply null
+**defaultValue** - The value which is used as a fallback.
+
+#### Response
+
+Returns the value of the environment variable, if the environment variable is not set, the default value will be returned.
+
+## Example
+
+```js
+$env('example', 'value'); // Value will be set
+$env('example'); // Returns 'value'
+$env('example', null, 42); // Returns 'value'
+$env('another-example', null, 42); // Returns 42
+$env('another-example'); // Throws an error
+```

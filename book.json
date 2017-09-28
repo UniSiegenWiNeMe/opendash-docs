@@ -8,7 +8,7 @@
   "pluginsConfig": {
     "edit-link": {
       "base": "https://github.com/UniSiegenWiNeMe/opendash-docs/edit/master",
-      "label": "Seite bearbeiten"
+      "label": "Improve this page"
     },
     "github": {
       "url": "https://github.com/UniSiegenWiNeMe/opendash"

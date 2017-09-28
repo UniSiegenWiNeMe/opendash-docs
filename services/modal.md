@@ -1,20 +1,27 @@
 # Modal Service (od.modal.service)
 
+The modal services allows you to:
+- Ask the user for confirmation
+- Prompt the user for a string input
+- Show a text popup.
+- Open a custom component in a modal
+
+**Contents:**
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Nutzung](#nutzung)
+- [Usage](#usage)
+- [Properties & Methods](#properties--methods)
+  - [$dashboard.confirm(message: String)](#dashboardconfirmmessage-string)
+  - [$dashboard.prompt(message: String)](#dashboardpromptmessage-string)
   - [$dashboard.showModal(options)](#dashboardshowmodaloptions)
 
 <!-- /TOC -->
 
-Mit dem Modal Service kann ein neues Modal erzeugt werden.
+## Usage
 
-## Nutzung
+Use the Modal Service by injecting `od.modal.service` as an Angular Service. We suggest using `$modal` as a name for the variable.
 
-Der Modal Service kann benutzt werden indem `od.modal.service` über Angular injected wird. Es empfiehlt sich diesen dann mit dem Parameter Namen `$modal` zu benutzen.
-
-Beispiel:
-
+Example:
 ```js
 class controller {
 
@@ -26,6 +33,24 @@ class controller {
 }
 ```
 
+## Properties & Methods
+
+### $dashboard.confirm(message: String)
+
+Asks the user to confirm the given message.
+
+#### Response
+
+Returns a promise resolving to `true` or `false`. The promise might be rejected if the user decides to close the modal.
+
+### $dashboard.prompt(message: String)
+
+Asks the user for an input string showing the given message.
+
+#### Response
+
+Returns a promise resolving to the input. The promise might be rejected if the user decides to close the modal.
+
 ### $dashboard.showModal(options)
 
-(TODO) Dokumentation fehlt.
+Do not use this method currently, as the api is not final. 

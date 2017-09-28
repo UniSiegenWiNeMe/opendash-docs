@@ -1,30 +1,30 @@
-# Dashboard Service (od.dashboard.service)
+# Event Service (od.event.service)
 
-Der Event Service ist dazu da mit Events in open.DASH zu arbeiten. Es können Events emittiert werden und auf Events reagiert werden.
+The event services allows you to:
+- Emit events
+- Handle built in events
+- Handle custom events
 
+**Contents:**
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [Nutzung](#nutzung)
+- [Usage](#usage)
+- [Properties & Methods](#properties--methods)
   - [$event.on(event: String, callback: Function)](#eventonevent-string-callback-function)
   - [$event.on(events: Array, callback: Function)](#eventonevents-array-callback-function)
+  - [$event.once(event: String, callback: Function)](#eventonceevent-string-callback-function)
+  - [$event.once(events: Array, callback: Function)](#eventonceevents-array-callback-function)
   - [$event.emit(event: String)](#eventemitevent-string)
   - [$event.emit(event: Array)](#eventemitevent-array)
 - [Core Events](#core-events)
-  - ["od-dashboard-ready" Event](#od-dashboard-ready-event)
-  - ["od-dashboard-changed" Event](#od-dashboard-changed-event)
-  - ["od-dashboard-save" Event](#od-dashboard-save-event)
-  - ["od-widgets-changed" Event](#od-widgets-changed-event)
-  - ["od-widgets-added" Event](#od-widgets-added-event)
-  - ["od-widgets-removed" Event](#od-widgets-removed-event)
 
 <!-- /TOC -->
 
-## Nutzung
+## Usage
 
-Der Event Service kann benutzt werden indem `od.event.service` über Angular injected wird. Es empfiehlt sich diesen dann mit dem Parameter Namen `$event` zu benutzen.
+Use the Event Service by injecting `od.event.service` as an Angular Service. We suggest using `$event` as a name for the variable.
 
-Beispiel:
-
+Example:
 ```js
 class controller {
 
@@ -36,58 +36,92 @@ class controller {
 }
 ```
 
+## Properties & Methods
+
 ### $event.on(event: String, callback: Function)
 
-Fügt einen Event Listener für das übergebene Event hinzu.
+Adds an event listener for the given event, which will be called every time a the event is fired.
 
-#### Beispiel
+#### Example
 
 ```js
-$event('od-dashboard-ready', () => {
-  // do something
+$event.on('od-dashboard-ready', () => {
+  // do something every time
 });
 ```
 
-#### Rückgabe
+#### Response
 
-Gibt `null` zurück.
+No return.
 
 ### $event.on(events: Array, callback: Function)
 
-Wenn an die `.on()` Methode ein Array von Events/Strings übergeben wird, statt einem String, dann wird die `.on()` Methode für jedes Event/jeden String auseführt. 
+```js
+$event.on(events, callback);
+
+// is the same as:
+
+events.forEach(event => {
+  $event.on(event, callback);
+});
+```
+
+### $event.once(event: String, callback: Function)
+
+Adds an event listener for the given event, which will be called when the event is fired the next time.
+
+#### Example
+
+```js
+$event.once('od-dashboard-ready', () => {
+  // do something once
+});
+```
+
+#### Response
+
+No return.
+
+### $event.once(events: Array, callback: Function)
+
+```js
+$event.once(events, callback);
+
+// is the same as:
+
+events.forEach(event => {
+  $event.once(event, callback);
+});
+```
 
 ### $event.emit(event: String)
 
-Signalisiert dass ein Event ausgelöst wurde.
+Calls each registered event listener with the given name.
 
 ### $event.emit(event: Array)
 
-Wenn an die `.emit()` Methode ein Array von Events/Strings übergeben wird, statt einem String, dann wird die `.emit()` Methode für jedes Event/jeden String auseführt. 
+```js
+$event.emit(events);
+
+// is the same as:
+
+events.forEach(event => {
+  $event.emit(event);
+});
+```
 
 ## Core Events
 
-Events die von dem Core von open.DASH emittiert werden.
+A list of events, which will be emitted by the core of open.DASH.
 
-### "od-dashboard-ready" Event
+- **"od-dashboard-ready" Event:** Will be fired, when the dashboard service is ready.
 
-Wird ausgelöst, wenn der Dashboard Service geladen hat.
+- **"od-dashboard-changed" Event:** Will be fired, when the dashboard changes.
 
-### "od-dashboard-changed" Event
+- **"od-dashboard-save" Event:** Will be fired, when the dashboard is saved to the user adapter.
 
-Wird ausgelöst, wenn das Dashboard sich verändert hat.
+- **"od-widgets-changed" Event:** Will be fired, when a widget changes
 
-### "od-dashboard-save" Event
+- **"od-widgets-added" Event:** Will be fired, when a widget was added to the dashboard.
 
-Wird ausgelöst, wenn das Dashboard gespeichert wird.
-
-### "od-widgets-changed" Event
-
-Wird ausgelöst, wenn sich eins der Widgets verändert hat.
-
-### "od-widgets-added" Event
-
-Wird ausgelöst, wenn ein Widget zum Dashboard hinzugeügt wurde.
-
-### "od-widgets-removed" Event
-
-Wird ausgelöst, wenn ein Widget aus dem Dashboard gelöscht wurde.
+- **"od-widgets-removed" Event:** Will be fired, when a widget was removed from the dashboard.
