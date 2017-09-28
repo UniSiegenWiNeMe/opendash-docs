@@ -14,7 +14,7 @@ Instances of OpenDashDataItem will be returned by the $data service.
 
 <!-- /TOC -->
 
-## TODO: HEADLINE NEEDED
+## Usage
 
 Use the $data service to get an instance of OpenDashDataItem. In the following example `item` will be an OpenDashDataItem.
 
@@ -150,7 +150,7 @@ Use the watch method to register a callback which will be called whenever a valu
 
 #### Parameter
 
-**callback**: Function which will be called, when a value changes.
+**callback**: Function which will be called, whenever the item changes.
 
 The callback will be called with three parameters: key, newValue and oldValue.
 
@@ -161,6 +161,28 @@ item.watch((key, newValue, oldValue) => {
   if(key === 'value') {
     console.log(`Value changed from ${oldValue} to ${newValue}`);
   }
+});
+```
+
+#### Response
+
+No response.
+
+### OpenDashDataItem.liveValues(callback: Function)
+
+Use the liveValues method to register a callback which will be called when the value changes. If there is a value when the method is called, the callback will be called immediately.
+
+#### Parameter
+
+**callback**: Function which will be called, when a value changes.
+
+The callback will be called with a single parameter: `value`.
+
+#### Example
+
+```js
+item.liveValues((value) => {
+  console.log(`Value of ${item.id} currently is ${value}`);
 });
 ```
 
@@ -193,4 +215,4 @@ item.set('value', {
 ```
 #### Response
 
-No response.
+A Promise will be returned, which will resolve without a value, if the set operation was successfull or reject with an error message.
