@@ -6,8 +6,9 @@ Custom user adapters are possible but not supported right now and will be added 
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Prebuild User Adapters](#prebuild-user-adapters)
-  - [Local User Adapter](#local-user-adapter)
-  - [Baasbox User Adapter](#baasbox-user-adapter)
+    - [Local User Adapter](#local-user-adapter)
+    - [Parse User Adapter](#parse-user-adapter)
+    - [Baasbox User Adapter](#baasbox-user-adapter)
 
 <!-- /TOC -->
 
@@ -26,7 +27,28 @@ import userAdapter from '@opendash/user-adapter-local';
 
 // ...
 
-instance.registerUserAdapter(userAdapter);
+instance.registerUserAdapter(userAdapter({
+  lsKey: 'some-unused-local-store-key', // default: 'opendash-user-adapter-local-data'
+}));
+```
+
+### Parse User Adapter
+
+Install via NPM: `npm i -S @opendash/user-adapter-parse`
+
+```js
+// app.js
+
+import userAdapter from '@opendash/user-adapter-parse';
+
+// ...
+
+instance.registerUserAdapter(userAdapter({
+  url: 'https://parse.example.com/parse/',
+  collection: 'openDASH2',
+  applicationId: '1234567890',
+  javaScriptKey: null, // default: undefined
+}));
 ```
 
 ### Baasbox User Adapter
@@ -40,9 +62,9 @@ import userAdapter from '@opendash/user-adapter-baasbox';
 
 // ...
 
-instance.env('USER-ADAPTER-BAASBOX-ENDPOINT', 'https://baasbox.example.com');
-instance.env('USER-ADAPTER-BAASBOX-APP-CODE', '123456789');
-instance.env('USER-ADAPTER-BAASBOX-COLLECTION', 'openDASH');
-
-instance.registerUserAdapter(userAdapter);
+instance.registerUserAdapter(userAdapter({
+  endpoint: 'https://baasbox.example.com',
+  collection: 'openDASH',
+  appCode: '123456789',
+}));
 ```
