@@ -4,12 +4,15 @@ Instances of OpenDashDataItem will be returned by the $data service.
 
 <!-- TOC depthFrom:2 depthTo:3 -->
 
-- [TODO: HEADLINE NEEDED](#todo-headline-needed)
+- [Usage](#usage)
 - [Properties](#properties)
   - [OpenDashDataItem.value](#opendashdataitemvalue)
+  - [OpenDashDataItem.valueTypes](#opendashdataitemvaluetypes)
 - [Methods](#methods)
+  - [OpenDashDataItem.isParent(input: OpenDashDataContainer)](#opendashdataitemisparentinput-opendashdatacontainer)
   - [OpenDashDataItem.history(options: Object)](#opendashdataitemhistoryoptions-object)
   - [OpenDashDataItem.watch(callback: Function)](#opendashdataitemwatchcallback-function)
+  - [OpenDashDataItem.liveValues(callback: Function)](#opendashdataitemlivevaluescallback-function)
   - [OpenDashDataItem.set(key: String, value: Any, save: Boolean, saveForUser: Boolean)](#opendashdataitemsetkey-string-value-any-save-boolean-saveforuser-boolean)
 
 <!-- /TOC -->
@@ -33,16 +36,17 @@ class controller {
 
 ## Properties
 
-- **id**: Unique ID of the item.
-- **type**: Type of the item.
-- **meta**: Object of meta information about the item, depending on type.
-- **parent**: Instance of `OpenDashDataItem` or `null`.
-- **children**: Array with instances of `OpenDashDataItem` or `[]`;
-- **value**: See below:
+- **id**: Unique identifier of the item.
+- **name**: Name of the item.
+- **icon**: Path to the icon of the item.
+- **meta**: Object of meta information about the item.
+- **parent**: ID of the parent item or `null`.
+- **value**: Value Object for the current value or `null` if there is no current value available.
+- **valueTypes**: Array representing the types of the value.
 
 ### OpenDashDataItem.value
 
-Returns the current value of the item, doesn't take a parameter.
+Returns the current value of the item.
 
 ```js
 item.value;
@@ -54,12 +58,38 @@ Returns an Object with two keys: date and value. Where date is a unix millisecon
 
 ```js
 {
-  date: 1483225200000,
-  value: 10,
+  date: 1483225200000, // unix millisecond timestamp
+  value: [10], // depending on item.valueTypes
 }
 ```
 
+### OpenDashDataItem.valueTypes
+
+Returns the current value of the item.
+
+Returns an Array of Objects which have two properties:
+
+- **name**: Name of the value, which will be displayed in the dashboard.
+- **type**: Type of the value, which must be one of the following Strings: Number, String, Boolean, Geo, Object
+
+```js
+item.valueTypes;
+
+// =>
+
+[
+  {
+    name: 'Display Name',
+    type: 'Number', // One of the following Strings: Number, String, Boolean, Geo, Object
+  },
+];
+```
+
 ## Methods
+
+### OpenDashDataItem.isParent(input: OpenDashDataContainer)
+
+Returns `true` or `false` wether the input container is a direct or indirect parent of the item.
 
 ### OpenDashDataItem.history(options: Object)
 
@@ -134,7 +164,7 @@ promise.then(values => {
   values = [
     {
       'date': 1483225200000, // unix millisecond timestamp.
-      'value': 10, // depending on the type
+      'value': [10], // depending on item.valueTypes
     },
   ];
 });
@@ -209,8 +239,8 @@ Adapters can use this method to set new values to the item like this:
 
 ```js
 item.set('value', {
-  date: 1483225200000, // Unix millisecond timestamp.
-  value: 'Some value', // Depending on item type.
+  date: 1483225200000, // Unix millisecond timestamp
+  value: ['Some value'], // Depending on item.valueType.
 });
 ```
 #### Response

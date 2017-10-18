@@ -30,6 +30,8 @@
 ## Classes
 
 * [OpenDashDataItem](/classes/data-item.md)
+* [OpenDashDataContainer](/classes/data-container.md)
+* [OpenDashDataQuery](/classes/data-query.md)
 * [OpenDashDataContext](/classes/data-context.md)
 
 ## Other

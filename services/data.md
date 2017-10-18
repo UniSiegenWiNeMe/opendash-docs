@@ -6,8 +6,10 @@ The data service allows you to pull data from all registered data adapters at th
 
 - [Usage](#usage)
 - [Properties & Methods](#properties--methods)
-  - [$data.list() (sync)](#datalist-sync)
-  - [$data.get(id: String) (sync)](#datagetid-string-sync)
+  - [$data.list()](#datalist)
+  - [$data.listByType(type: String)](#datalistbytypetype-string)
+  - [$data.query()](#dataquery)
+  - [$data.get(id: String)](#datagetid-string)
 
 <!-- /TOC -->
 
@@ -29,7 +31,7 @@ class controller {
 
 ## Properties & Methods
 
-### $data.list() (sync)
+### $data.list()
 
 Returns all open.DASH data items.
 
@@ -39,9 +41,46 @@ let items = $data.list();
 
 #### Response
 
-Returns an Array containing all instances of [OpenDashDataItem](/classes/data-item.md).
+Returns an Array containing all instances of [OpenDashDataItem](/classes/data-item.md) and [OpenDashDataContainer](/classes/data-container.md).
 
-### $data.get(id: String) (sync)
+### $data.listByType(type: String)
+
+Returns all open.DASH data items.
+
+```js
+let items = $data.listByType('Number');
+
+items.forEach(i => {
+  let item = i[0]; // OpenDashDataItem
+  let index = i[1]; // Index
+
+  item.value.values[index]; // A numeric value
+});
+```
+
+#### Parameter
+
+- **type**: One of the following Strings: Number, String, Boolean, Geo, Object
+
+#### Response
+
+Returns an two dimensional Arrays where the inner Array has two Elements. The first is a instance of [OpenDashDataItem](/classes/data-item.md), the second one is the index of the requested value type.
+
+The same instance of [OpenDashDataItem](/classes/data-item.md) my be returned multiple times, if the value uses the requested value type multiple times.
+
+### $data.query()
+
+Returns a query.
+
+```js
+let items = $data.list();
+```
+
+#### Response
+
+Returns an instances of [OpenDashDataQuery](/classes/data-query.md).
+
+### $data.get(id: String)
 
 Returns a single open.DASH data item.
 

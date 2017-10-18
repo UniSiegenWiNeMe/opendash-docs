@@ -7,6 +7,7 @@ Is available to data adapters.
 - [Methods](#methods)
   - [OpenDashDataContext.get()](#opendashdatacontextget)
   - [OpenDashDataContext.create(payload: Object)](#opendashdatacontextcreatepayload-object)
+  - [OpenDashDataContext.createContainer(payload: Object)](#opendashdatacontextcreatecontainerpayload-object)
 
 <!-- /TOC -->
 
@@ -34,8 +35,34 @@ Create a new [OpenDashDataItem](/classes/data-item.md) and save it in the data a
 The parameter should be and object will the following properties:
 
 - **id**: Unique identifier of the item.
-- **type**: Type of the item.
-- **meta**: Object of meta information about the item, depending on type.
+- **name**: Name of the item.
+- **icon**: (Optional) Path to the icon of the item.
+- **meta**: (Optional) Object of meta information about the item.
 - **parent**: (Optional) ID of the parent item.
 - **value**: (Optional) Value Object for the current value.
+- **valueTypes**: Array representing the types of the value.
 
+```js
+{
+  valueTypes: [
+    {
+      name: 'Display Name',
+      type: 'Number', // One of the following Strings: Number, String, Boolean, Geo, Object
+    },
+  ],
+}
+```
+
+### OpenDashDataContext.createContainer(payload: Object)
+
+Create a new [OpenDashDataContainer](/classes/data-container.md) and save it in the data adapter.
+
+#### Parameter
+
+The parameter should be and object will the following properties:
+
+- **id**: Unique identifier of the container.
+- **name**: Name of the container.
+- **icon**: (Optional) Path to the icon of the container.
+- **meta**: (Optional) Object of meta information about the container.
+- **parent**: (Optional) ID of the parent container.

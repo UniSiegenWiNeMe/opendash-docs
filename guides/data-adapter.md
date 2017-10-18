@@ -93,7 +93,7 @@ The Array of value Objects should look like this:
 resolve([
   {
     date: 1483225200000, // Unix millisecond timestamp.
-    value: 'Some value', // Depending on item type.
+    value: ['Some value'], // Depending on item.valueTypes.
   },
 ]);
 ```
