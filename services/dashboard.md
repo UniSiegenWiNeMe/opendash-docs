@@ -1,4 +1,4 @@
-# Dashboard Service (od.dashboard.service)
+# Dashboard Service (opendash/services/dashboard)
 
 The Dashboard Service allows you to:
 - Get a list of all dashboards.
@@ -20,13 +20,13 @@ The Dashboard Service allows you to:
 
 ## Usage
 
-Use the Dashboard Service by injecting `od.dashboard.service` as an Angular Service. We suggest using `$dashboard` as a name for the variable.
+Use the Dashboard Service by injecting `opendash/services/dashboard` as an Angular Service. We suggest using `$dashboard` as a name for the variable.
 
 Example:
 ```js
 class controller {
 
-  static $inject = ['od.dashboard.service'];
+  static get $inject() { return ['opendash/services/dashboard']; }
 
   constructor($dashboard) {
     // ...
@@ -81,7 +81,7 @@ Returns `true` if the widget was added to the dashboard, `false` if not.
 
 ### $dashboard.onWidgetResize(callback: Function)
 
-Deprecated - use the `od.event.service` instead.
+Deprecated - use the `opendash/services/event` instead.
 
 ```js
 $event.on('od-widgets-resize', callback);

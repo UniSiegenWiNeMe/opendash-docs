@@ -110,7 +110,7 @@ An controller written in ES6 may look like this:
 ```js
 export default class WidgetController {
 
-  static $inject = ['od.data.service', '$element', '$scope', 'moment', 'lodash'];
+  static get $inject() { return ['opendash/services/data', '$element', '$scope', 'moment', 'lodash']; }
 
   constructor($data, $element, $scope, moment, _) {
     // ...
@@ -122,7 +122,21 @@ Note: The static $inject property is set for Angular to know which dependencies 
 
 Your Controller may have any methods and properties, but it shouldn't overwrite its properties `this.widget`, `this.state` and `this.config`.
 
+#### Widget Functions (this.widget)
+
+> Make sure to call anything related to `this.widget` after the Anguarjs Component `$onInit()` lifecycle hook is called.
+> 
+> To do so, create a `$onInit()` method in the widget context.
+
+##### this.widget.rename(name: String)
+
+Will rename the widget to the given name.
+
 #### Configuration (this.config)
+
+> Make sure to call anything related to `this.widget` after the Anguarjs Component `$onInit()` lifecycle hook is called.
+> 
+> To do so, create a `$onInit()` method in the widget context.
 
 > Warning: Some of the following features are using Proxies, which will not be transformed by Babel. Make sure to use an up-to-date browser to utilise all of the features.
 
@@ -137,7 +151,7 @@ To write to the config, you should utilise the settings component.
 ```js
 export default class WidgetController {
 
-  static $inject = [];
+  static get $inject() { return []; }
 
   constructor() {
     // access your configuration object
@@ -145,19 +159,15 @@ export default class WidgetController {
 
     // access a configuration property
     console.log(this.config.key);
-
-    // watch a property for changes
-    // the callback will be called immediately
-    // and every time the property changes
-    this.config.watch('key', (value, oldValue) => {
-      // oldValue might be undefined
-      console.log(value, oldValue);
-    });
   }
 }
 ```
 
 #### State (this.state)
+
+> Make sure to call anything related to `this.widget` after the Anguarjs Component `$onInit()` lifecycle hook is called.
+> 
+> To do so, create a `$onInit()` method in the widget context.
 
 > Note: You may run into an Error (or nothing happens) if you try to access `this` within callbacks, when you are not using arrow functions. Make sure you are accessing `this` in the right scope.
 
@@ -178,7 +188,7 @@ Set the loading state to false, as soon as all the informations, which are requi
 ```js
 export default class WidgetController {
 
-  static $inject = ['od.data.service'];
+  static get $inject() { return ['opendash/services/data']; }
 
   constructor($data) {
     // ...
@@ -207,7 +217,7 @@ You should also implement some kind of validation in your settings controller, s
 ```js
 export default class WidgetController {
 
-  static $inject = ['od.data.service'];
+  static get $inject() { return ['opendash/services/data']; }
 
   constructor($data) {
     if (!this.config.needed) {
@@ -221,7 +231,7 @@ export default class WidgetController {
 
 ##### this.state.alert
 
-When it's `false` nothing will happen, when it's `true` there will an anmation making the user aware of the situation.
+When it's `false` nothing will happen, when it's `true` there will an animation making the user aware of the situation.
 
 By default this value is `false`.
 
@@ -232,7 +242,7 @@ Note: Once the value is set to true, you should set it back to false after some 
 ```js
 export default class WidgetController {
 
-  static $inject = ['od.data.service', '$timeout'];
+  static get $inject() { return ['opendash/services/data', '$timeout']; }
 
   constructor($data, $timeout) {
     let value = $data.get(id).value;
@@ -263,6 +273,8 @@ A template string for the widget [Angular Component](https://docs.angularjs.org/
 ### settingsController
 
 A controller for the settings [Angular Component](https://docs.angularjs.org/guide/component).
+
+For faster settings development, take a look at [these components](/components/select).
 
 ### settingsTemplate
 

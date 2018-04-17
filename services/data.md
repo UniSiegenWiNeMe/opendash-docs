@@ -1,4 +1,4 @@
-# Data Service (od.data.service)
+# Data Service (opendash/services/data)
 
 The data service allows you to pull data from all registered data adapters at the same time.
 
@@ -6,22 +6,22 @@ The data service allows you to pull data from all registered data adapters at th
 
 - [Usage](#usage)
 - [Properties & Methods](#properties--methods)
-  - [$data.list()](#datalist)
-  - [$data.listByType(type: String)](#datalistbytypetype-string)
-  - [$data.query()](#dataquery)
-  - [$data.get(id: String)](#datagetid-string)
+    - [$data.list()](#datalist)
+    - [$data.listByType(type: String)](#datalistbytypetype-string)
+    - [$data.query()](#dataquery)
+    - [$data.get(id: String)](#datagetid-string)
 
 <!-- /TOC -->
 
 ## Usage
 
-Use the Data Service by injecting `od.data.service` as an Angular Service. We suggest using `$data` as a name for the variable.
+Use the Data Service by injecting `opendash/services/data` as an Angular Service. We suggest using `$data` as a name for the variable.
 
 Example:
 ```js
 class controller {
 
-  static $inject = ['od.data.service'];
+  static get $inject() { return ['opendash/services/data']; }
 
   constructor($data) {
     // ...
@@ -51,8 +51,7 @@ Returns all open.DASH data items.
 let items = $data.listByType('Number');
 
 items.forEach(i => {
-  let item = i[0]; // OpenDashDataItem
-  let index = i[1]; // Index
+  let [item, index] = i;
 
   item.value.values[index]; // A numeric value
 });

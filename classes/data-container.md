@@ -17,7 +17,7 @@ Example:
 ```js
 class controller {
 
-  static $inject = ['od.data.service'];
+  static get $inject() { return ['opendash/services/data']; }
 
   constructor($data) {
     let container = $data.get('container.id');
@@ -25,7 +25,6 @@ class controller {
   }
 }
 ```
-
 
 ## Properties
 

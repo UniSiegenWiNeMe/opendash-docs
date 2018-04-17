@@ -1,4 +1,4 @@
-# Env Service (od.env.service)
+# Env Service (opendash/services/env)
 
 The env service allows you to use and register global environment variables, to configurate your instance.
 
@@ -28,14 +28,14 @@ const instance = new openDASH();
 instance.env('OD-EVENTS-LOG', true);
 ```
 
-- Use the Env Service by injecting `od.env.service` as an Angular Service. We suggest using `$env` as a name for the variable.
+- Use the Env Service by injecting `opendash/services/env` as an Angular Service. We suggest using `$env` as a name for the variable.
 
 Example:
 
 ```js
 class controller {
 
-  static $inject = ['od.env.service'];
+  static get $inject() { return ['opendash/services/env']; }
 
   constructor($env) {
     // Get the OD-EVENTS-LOG environment variable

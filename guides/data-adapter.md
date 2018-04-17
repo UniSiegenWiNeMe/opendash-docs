@@ -40,7 +40,7 @@ const anotherDataAdapterFactory = ($user, $http, $q) => {
   return { ... }; // Adapter Object 
 };
 
-anotherDataAdapterFactory.$inject = ['od.user.service', '$http', '$q'];
+anotherDataAdapterFactory.$inject = ['opendash/services/user', '$http', '$q'];
 ```
 
 ### Adapter Object

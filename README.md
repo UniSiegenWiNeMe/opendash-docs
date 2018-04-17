@@ -6,6 +6,12 @@ This page is still under construction.
 
 open.DASH ist an open source visualization framework written mainly in javascript. It allows you to provide a dashboard for your users, which is connected to your existing data sources, your user management and other http/websocket sources.
 
+## Versioning
+
+Starting with version 2.0.0, the `opendash` package found on npm follows semantic versioning.
+
+Changes can be found on the [changes](/changes.md) page.
+
 ## Getting started
 
 There are two ways to work with open.DASH:

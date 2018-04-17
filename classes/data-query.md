@@ -1,19 +1,19 @@
 # OpenDashDataQuery Class
 
-Instances of OpenDashDataQuery will be returned by the $data service.
+Instances of OpenDashDataQuery will be returned by the $data service. Use the query object to recive a custom list of items from the $data service.
 
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 - [Usage](#usage)
 - [Methods](#methods)
-  - [OpenDashDataQuery.filter(func: Function)](#opendashdataqueryfilterfunc-function)
-  - [OpenDashDataQuery.union(input: Array)](#opendashdataqueryunioninput-array)
-  - [OpenDashDataQuery.intersection(input: Array)](#opendashdataqueryintersectioninput-array)
-  - [OpenDashDataQuery.difference(input: Array)](#opendashdataquerydifferenceinput-array)
-  - [OpenDashDataQuery.root()](#opendashdataqueryroot)
-  - [OpenDashDataQuery.container()](#opendashdataquerycontainer)
-  - [OpenDashDataQuery.items()](#opendashdataqueryitems)
-  - [OpenDashDataQuery.run()](#opendashdataqueryrun)
+    - [OpenDashDataQuery.filter(func: Function)](#opendashdataqueryfilterfunc-function)
+    - [OpenDashDataQuery.union(input: Array)](#opendashdataqueryunioninput-array)
+    - [OpenDashDataQuery.intersection(input: Array)](#opendashdataqueryintersectioninput-array)
+    - [OpenDashDataQuery.difference(input: Array)](#opendashdataquerydifferenceinput-array)
+    - [OpenDashDataQuery.root()](#opendashdataqueryroot)
+    - [OpenDashDataQuery.container()](#opendashdataquerycontainer)
+    - [OpenDashDataQuery.items()](#opendashdataqueryitems)
+    - [OpenDashDataQuery.run()](#opendashdataqueryrun)
 
 <!-- /TOC -->
 
@@ -25,7 +25,7 @@ Example:
 ```js
 class controller {
 
-  static $inject = ['od.data.service'];
+  static get $inject() { return ['opendash/services/data']; }
 
   constructor($data) {
     let query = $data.query();

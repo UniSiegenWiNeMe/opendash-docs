@@ -1,8 +1,8 @@
-# User Service (od.user.service)
+# User Service (opendash/services/user)
 
 <!-- TOC depthFrom:2 depthTo:3 -->
 
 
 <!-- /TOC -->
 
-Kommt bald!
+Coming soon

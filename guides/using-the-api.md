@@ -10,13 +10,13 @@ This guide assumes that you have a build process up and running. If you don't wa
 - [Installation](#installation)
 - [Usage](#usage)
 - [Methods](#methods)
-  - [instance.registerUserAdapter(adapter)](#instanceregisteruseradapteradapter)
-  - [instance.registerDataAdapter(name, adapter)](#instanceregisterdataadaptername-adapter)
-  - [instance.registerWidget(widget)](#instanceregisterwidgetwidget)
-  - [instance.registerWidgets(widgets)](#instanceregisterwidgetswidgets)
-  - [instance.env(key, value)](#instanceenvkey-value)
-  - [instance.config(settings)](#instanceconfigsettings)
-  - [instance.start()](#instancestart)
+    - [instance.registerUserAdapter(adapter)](#instanceregisteruseradapteradapter)
+    - [instance.registerDataAdapter(name, adapter)](#instanceregisterdataadaptername-adapter)
+    - [instance.registerWidget(widget)](#instanceregisterwidgetwidget)
+    - [instance.registerWidgets(widgets)](#instanceregisterwidgetswidgets)
+    - [instance.env(key, value)](#instanceenvkey-value)
+    - [instance.config(settings)](#instanceconfigsettings)
+    - [instance.start()](#instancestart)
 
 <!-- /TOC -->
 
@@ -33,9 +33,7 @@ npm install --save opendash
 Get the open.DASH Class by importing it in the file you want to use open.DASH in. Secondly, create an instance to be able to use the API.
 
 ```js
-import openDASH from 'opendash';
-
-const instance = new openDASH();
+import instance from 'opendash';
 ```
 
 ## Methods

@@ -1,4 +1,4 @@
-# Event Service (od.event.service)
+# Event Service (opendash/services/event)
 
 The event services allows you to:
 - Emit events
@@ -10,25 +10,25 @@ The event services allows you to:
 
 - [Usage](#usage)
 - [Properties & Methods](#properties--methods)
-  - [$event.on(event: String, callback: Function)](#eventonevent-string-callback-function)
-  - [$event.on(events: Array, callback: Function)](#eventonevents-array-callback-function)
-  - [$event.once(event: String, callback: Function)](#eventonceevent-string-callback-function)
-  - [$event.once(events: Array, callback: Function)](#eventonceevents-array-callback-function)
-  - [$event.emit(event: String)](#eventemitevent-string)
-  - [$event.emit(event: Array)](#eventemitevent-array)
+    - [$event.on(event: String, callback: Function)](#eventonevent-string-callback-function)
+    - [$event.on(events: Array, callback: Function)](#eventonevents-array-callback-function)
+    - [$event.once(event: String, callback: Function)](#eventonceevent-string-callback-function)
+    - [$event.once(events: Array, callback: Function)](#eventonceevents-array-callback-function)
+    - [$event.emit(event: String)](#eventemitevent-string)
+    - [$event.emit(event: Array)](#eventemitevent-array)
 - [Core Events](#core-events)
 
 <!-- /TOC -->
 
 ## Usage
 
-Use the Event Service by injecting `od.event.service` as an Angular Service. We suggest using `$event` as a name for the variable.
+Use the Event Service by injecting `opendash/services/event` as an Angular Service. We suggest using `$event` as a name for the variable.
 
 Example:
 ```js
 class controller {
 
-  static $inject = ['od.event.service'];
+  static get $inject() { return ['opendash/services/event']; }
 
   constructor($event) {
     // ...

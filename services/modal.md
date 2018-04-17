@@ -1,4 +1,4 @@
-# Modal Service (od.modal.service)
+# Modal Service (opendash/services/modal)
 
 The modal services allows you to:
 - Ask the user for confirmation
@@ -11,21 +11,21 @@ The modal services allows you to:
 
 - [Usage](#usage)
 - [Properties & Methods](#properties--methods)
-  - [$dashboard.confirm(message: String)](#dashboardconfirmmessage-string)
-  - [$dashboard.prompt(message: String)](#dashboardpromptmessage-string)
-  - [$dashboard.showModal(options)](#dashboardshowmodaloptions)
+    - [$modal.confirm(message: String)](#modalconfirmmessage-string)
+    - [$modal.prompt(message: String)](#modalpromptmessage-string)
+    - [$modal.showModal(options)](#modalshowmodaloptions)
 
 <!-- /TOC -->
 
 ## Usage
 
-Use the Modal Service by injecting `od.modal.service` as an Angular Service. We suggest using `$modal` as a name for the variable.
+Use the Modal Service by injecting `opendash/services/modal` as an Angular Service. We suggest using `$modal` as a name for the variable.
 
 Example:
 ```js
 class controller {
 
-  static $inject = ['od.modal.service'];
+  static get $inject() { return ['opendash/services/modal']; }
 
   constructor($modal) {
     // ...
@@ -35,7 +35,7 @@ class controller {
 
 ## Properties & Methods
 
-### $dashboard.confirm(message: String)
+### $modal.confirm(message: String)
 
 Asks the user to confirm the given message.
 
@@ -43,7 +43,7 @@ Asks the user to confirm the given message.
 
 Returns a promise resolving to `true` or `false`. The promise might be rejected if the user decides to close the modal.
 
-### $dashboard.prompt(message: String)
+### $modal.prompt(message: String)
 
 Asks the user for an input string showing the given message.
 
@@ -51,6 +51,6 @@ Asks the user for an input string showing the given message.
 
 Returns a promise resolving to the input. The promise might be rejected if the user decides to close the modal.
 
-### $dashboard.showModal(options)
+### $modal.showModal(options)
 
 Do not use this method currently, as the api is not final. 
