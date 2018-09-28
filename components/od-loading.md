@@ -10,14 +10,18 @@ Add the following element above your content in your template.
 <od-loading ng-show="$ctrl.loading"></od-loading>
 ```
 
+> Make sure the parent element has it's position set to relative in css, otherwise the loading element might cover more than you want.
+
 Use the [ng-show](https://docs.angularjs.org/api/ng/directive/ngShow) direktive to show/hide the animation.
 
-Initialize the attribute in your controller with `true` and disable the animation by setting the attribute to `false` as soon as everything is loaded. 
+Initialize the attribute in your controller with `true` and disable the animation by setting the attribute to `false` as soon as everything is loaded.
 
 ```js
 this.loading = true;
 
-$timeout(() => { this.loading = false; }, 1000);
+$timeout(() => {
+  this.loading = false;
+}, 1000);
 ```
 
 ### Example using $scope
